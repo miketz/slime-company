@@ -244,9 +244,9 @@ be active in derived modes as well."
                 (funcall callback
                          (mapcar
                           (lambda (completion)
-                            (cl-destructuring-bind (sym score _ flags)
+                            (cl-destructuring-bind (sym flags _ _)
                                 completion
-                              (propertize sym 'score score 'flags flags)))
+                              (propertize sym 'flags flags)))
                           (car result))))
               package)))))
 
